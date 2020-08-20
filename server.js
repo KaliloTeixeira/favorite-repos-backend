@@ -1,9 +1,10 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const requireDir = require('require-dir');
 
-const uri = "mongodb+srv://admin:admin@cluster0.2bxts.mongodb.net/nodeapi?retryWrites=true&w=majority";
+const uri = process.env.MONGO_URL;
 
 //  Iniciando o APP
 const app = express();
