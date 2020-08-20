@@ -24,9 +24,10 @@ module.exports = {
     },
 
     async updateProduct(req, res) {
-        const product = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        // const product = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
 
-        return res.json(product);
+
+        return res.json('tudo certo');
     },
 
     async removeProduct(req, res) {
