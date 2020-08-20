@@ -7,7 +7,7 @@ const ProductController = require('./controllers/ProductController');
 //O resposta é a resposta que daremos à requisição
 
 
-routes.get('/products', ProductController.listProducts);
+routes.get('/', ProductController.listProducts);
 routes.get('/products/:id', ProductController.showProduct);
 routes.post('/products', ProductController.createProduct);
 routes.put('/products/:id', ProductController.updateProduct);

@@ -8,7 +8,7 @@ const uri = "mongodb+srv://admin:admin@cluster0.2bxts.mongodb.net/nodeapi?retryW
 //  Iniciando o APP
 const app = express();
 app.use(express.json()); // Permitir que eu envie dados para a aplicação no formato de json
-app.use(cors('https://favorite-repos-backend.herokuapp.com/'));
+app.use(cors());
 
 // Iniciando o DB
 mongoose.connect(uri, {
