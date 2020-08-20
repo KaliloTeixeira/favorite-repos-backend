@@ -5,10 +5,10 @@ const Product = mongoose.model('Product');
 
 module.exports = {
     async listProducts(req, res) {
-        const { page = 1 } = req.query;
-        const products = await Product.paginate({}, { page, limit: 10 });
+        // const { page = 1 } = req.query;
+        // const products = await Product.paginate({}, { page, limit: 10 });
         // .json() envia a resposta como Estrutura de Dados (json)
-        return res.json(products);
+        return res.json('listando...');
     },
 
     async showProduct(req, res) {
@@ -24,9 +24,9 @@ module.exports = {
     },
 
     async updateProduct(req, res) {
-        // const product = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        const product = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
 
-        return res.json('chegou aqui');
+        return res.json(product);
     },
 
     async removeProduct(req, res) {
