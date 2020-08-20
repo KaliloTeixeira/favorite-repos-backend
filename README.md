@@ -11,3 +11,8 @@ I build that application as exercise from Rocketseat classes and could learn how
 * Mongoose
 
 => You can find more about my learning process in ./notes.txt.
+
+## Install Guide
+
+1 - Clone this repositorie;
+2 - run 'npm start';
