@@ -44,3 +44,16 @@
     - Para utilizar a estrutura de Json dentro do app deve-se utilizar:
         - app.use(express.json()); - No arquivo principal do app
         ... Mais detalhes em server.js
+
+    * Opções que ajudam no deploy
+        - Instalar o dotenv
+            - npm install dotenv
+            - Importar no server.js
+                - require('dotenv').config()
+
+            - Criar variaveis que devem ser 'secretas' no arquivo .env
+            VAR_NAME=https://continuacao.com
+
+        - No momento de escolher a porta do servidor colocar:
+            app.listen(process.env.PORT || 3000);
+                - Pois, quando a aplicacao está em produção, o dev nao pode escolher a porta que está rodando.
